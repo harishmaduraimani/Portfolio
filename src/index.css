@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Syne:wght@500;700;800;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-display: 'Syne', sans-serif;
+  --font-sans: 'Plus Jakarta Sans', sans-serif;
+  --font-hand: 'Caveat', cursive;
+  --font-mono: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+
+  --color-lime: #76ff03;
+  --color-orange: #ff6b00;
+  --color-cyan: #00d2ff;
+  --color-purple: #a855f7;
+  --color-dark: #0c0d11;
+}
+
+:root {
+  --color-bg-dark: #0c0d11;
+  --color-lime: #76ff03;
+  --color-orange: #ff6b00;
+  --color-cyan: #00d2ff;
+  --color-purple: #a855f7;
+
+  --font-display: 'Syne', sans-serif;
+  --font-sans: 'Plus Jakarta Sans', sans-serif;
+  --font-hand: 'Caveat', cursive;
+  --font-mono: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: #0c0d11;
+  color: #f8fafc;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  max-width: 100vw;
+  width: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #0c0d11;
+  overflow-x: hidden;
+  max-width: 100vw;
+  width: 100%;
+  position: relative;
+}
+
+#root {
+  overflow-x: hidden;
+  max-width: 100vw;
+  width: 100%;
+}
+
+::selection {
+  background: #76ff03;
+  color: #000000;
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 0px; /* Eliminate horizontal scrollbar on root */
+}
+
+::-webkit-scrollbar-track {
+  background: #090a0d;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #242735;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #76ff03;
+}
+
+/* Parchment inner scrollbar - GREEN COLOR */
+.parchment-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: #76ff03 rgba(45, 30, 15, 0.12);
+  overflow-x: hidden !important;
+}
+
+.parchment-scroll::-webkit-scrollbar {
+  width: 5px;
+  height: 0px; /* Completely eliminate horizontal scrollbar */
+}
+
+.parchment-scroll::-webkit-scrollbar-track {
+  background: rgba(45, 30, 15, 0.12);
+  border-radius: 4px;
+}
+
+.parchment-scroll::-webkit-scrollbar-thumb {
+  background: #76ff03;
+  border-radius: 4px;
+  box-shadow: 0 0 8px rgba(118, 255, 3, 0.5);
+}
+
+.parchment-scroll::-webkit-scrollbar-thumb:hover {
+  background: #90ff33;
+}
+
+/* Background noise texture */
+.noise-overlay {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 999;
+  opacity: 0.025;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+/* Navbar glass on scroll */
+.nav-scrolled {
+  background: rgba(12, 13, 17, 0.85);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
