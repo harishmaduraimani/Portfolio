@@ -104,7 +104,7 @@ export interface DesignerProfile {
 export const DESIGNER: DesignerProfile = {
   name: "HARISH MADURAIMANI",
   initials: "HMM",
-
+  role: "ENGINEER • PRODUCT BUILDER • ENTREPRENEUR",
   subtitle:
     "AI • EMBEDDED SYSTEMS • ROBOTICS • STARTUPS • PRODUCT DESIGN • BRANDING",
   tagline:

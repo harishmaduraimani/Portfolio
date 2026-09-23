@@ -523,7 +523,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onEnterWork }) => {
                     RESUME // HARISH MADURAIMANI
                   </h3>
                   <span className="font-mono text-[10px] text-lime-400 tracking-wider uppercase block mt-0.5">
-                    ELECTRONICS & ELECTRICAL ENGINEER • EMBEDDED • ROBOTICS • IoT
+                    ELECTRONICS • EMBEDDED • ROBOTICS • IoT
                   </span>
                 </div>
               </div>
